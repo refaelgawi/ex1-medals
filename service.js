@@ -9,11 +9,11 @@ const Country       =     require('./db/schemas/country');
 module.exports = () => {
   mlab_connect();
 
+  app.use(express.static(__dirname));
   app.use((req,res,next) => {
     bodyParser.json();                          // to support JSON-encoded bodies
     bodyParser.urlencoded({extended: true});    // to support URL-encoded bodies
     bodyParser.raw();
-    express.static(".");
     next();
   })
 
