@@ -1,6 +1,7 @@
 const express       =     require("express");
 const bodyParser    =     require('body-parser');
 const app           =     express();
+const path          =     require("path");
 const {PORT, DB}    =     require('./consts');
 const mlab_connect  =     require('./db/connection');
 const Country       =     require('./db/schemas/country');
@@ -12,11 +13,17 @@ module.exports = () => {
     bodyParser.json();                          // to support JSON-encoded bodies
     bodyParser.urlencoded({extended: true});    // to support URL-encoded bodies
     bodyParser.raw();
+    express.static(".");
     next();
   })
 
   app.get('/',(req,res) => {
-    res.send("this is index");
+    res.redirect('/API');
+  })
+
+  app.get('/API', (req,res) => {
+    const indexPath = path.join(__dirname, '/API/index.html');
+    res.sendFile(indexPath);
   })
 
   app.get('/getAllCountries', (req,res) => {
