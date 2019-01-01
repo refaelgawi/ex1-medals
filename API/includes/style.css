@@ -1,3 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: David;
+}
+head , footer, article, nav, {
+  display: block;
+}
 body{
-  background: blue;
+  background: Gainsboro;
+}
+header {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+/*  background: Gainsboro;*/
+}
+
+h1 {
+  top: 50px ;
+  font-family: cursive;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left:100px;
+   margin-bottom: 20px;:
+}
+p {
+  margin-left:140px;
+  font-size: 20px;
+  margin-bottom: 5px;:
+}
+
+#spacious
+{
+  margin-left:240px;
 }

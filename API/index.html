@@ -6,8 +6,36 @@
       <link rel="stylesheet" type="text/css" href="includes/style.css">
   </head>
   <body>
-    this is my API!!!
-    <div>add</div>
-    <div>moshe</div>
+      <header>
+          <h1>  ניהול מדליות לפי מדינות - ex1</h1>
+      </header>
+      <div id = "wrapper">
+        <h2>Get all Country </h2>
+        <p>Relative path:getAllCountries/ </p>
+        <p>Verb:Get</p>
+        <p>URL:<a href="https://ex1-medals.herokuapp.com/getAllCountries">https://ex1-medals.herokuapp.com/getAllCountries</a></p>
+
+        <h2>Get country</h2>
+        <p>Relative path:getCountry/ </p>
+        <p>Verb:Post</p>
+        <p>URL:https://ex1-medals.herokuapp.com/getCountry/usa</p>
+        <p>Description:At the end of the link write the name of the country</p>
+
+        <h2>Get Countries by minimum medals</h2>
+        <p>Relative path:getCountryByMinMedals/ </p>
+        <p>Verb:Post</p>
+        <p>URL:https://ex1-medals.herokuapp.com/getCountryByMinMedals/10/20/30</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or https://ex1-medals.herokuapp.com/getCountryByMinMedals/7/15
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or https://ex1-medals.herokuapp.com/getCountryByMinMedals/1
+        <p>Description:At the end of the link write the minimum medals gold /silver / bronza of each country  </p>
+        <p id ="spacious">You have 3 options - write only gold </p>
+        <p id ="spacious">Write only gold  and silver </p>
+        <p id ="spacious">Write only gold and silver and bronza</p>
+
+
+      </div>
+
+    <div class="clear"></div>
+    <footer></footer>
   </body>
 </html>
